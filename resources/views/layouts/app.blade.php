@@ -12,11 +12,9 @@
 
         <!-- Styles -->
         <link rel="stylesheet" href="{{ mix('css/app.css') }}">
+        <link rel="stylesheet" href="{{ mix('css/styles.css') }}">
 
         @livewireStyles
-
-        <!-- Scripts -->
-        <script src="{{ mix('js/app.js') }}" defer></script>
     </head>
     <body class="font-sans antialiased">
         <x-jet-banner />
@@ -42,5 +40,8 @@
         @stack('modals')
 
         @livewireScripts
+
+        <!-- Scripts -->
+        <script src="{{ mix('js/app.js') }}" defer></script>
     </body>
 </html>
