@@ -11,6 +11,10 @@ class Show extends Component
 
     public function render()
     {
-        return view('livewire.projects.show');
+        return view('livewire.projects.show')
+            ->layout('layouts.pages.base', [
+                'breadcrumb_name' => 'projects.show',
+                'breadcrumb_params' => $this->project
+            ]);
     }
 }

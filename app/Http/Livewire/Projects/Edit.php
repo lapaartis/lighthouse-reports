@@ -24,6 +24,10 @@ class Edit extends Component
 
     public function render()
     {
-        return view('livewire.projects.edit');
+        return view('livewire.projects.edit')
+            ->layout('layouts.pages.base', [
+                'breadcrumb_name' => 'projects.edit',
+                'breadcrumb_params' => $this->project
+            ]);
     }
 }

@@ -12,14 +12,16 @@ class Index extends Component
 
     public string $search;
 
-    public function mount() {
+    public function mount()
+    {
         $this->search = '';
     }
 
     public function render()
     {
         return view('livewire.projects.index', [
-            'projects' => Project::where('name', 'like', '%'.$this->search.'%')->paginate(6),
-        ]);
+            'projects' => Project::where('name', 'like', '%' . $this->search . '%')->paginate(6),
+        ])
+            ->layout('layouts.pages.base', ['breadcrumb_name' => 'projects']);
     }
 }
