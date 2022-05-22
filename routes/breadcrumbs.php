@@ -7,6 +7,10 @@ Breadcrumbs::for('home', function (Generator $trail) {
     $trail->push('Home', route('dashboard'));
 });
 
+Breadcrumbs::for('audits', function (Generator $trail)  {
+    $trail->parent('home')->push('Audits', route('audits.index'));
+});
+
 Breadcrumbs::for('projects', function (Generator $trail)  {
     $trail->parent('home')->push('Projects', route('projects.index'));
 });

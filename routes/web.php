@@ -25,4 +25,5 @@ Route::middleware([
     Route::get('projects/create', \App\Http\Livewire\Projects\Create::class)->name('projects.create');
     Route::get('projects/{project}', \App\Http\Livewire\Projects\Show::class)->name('projects.show');
     Route::get('projects/{project}/edit', \App\Http\Livewire\Projects\Edit::class)->name('projects.edit');
+    Route::get('audits', \App\Http\Livewire\Audits\Index::class)->name('audits.index');
 });
