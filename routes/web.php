@@ -21,4 +21,8 @@ Route::middleware([
     Route::get('/', function () {
         return view('dashboard');
     })->name('dashboard');
+    Route::get('projects', \App\Http\Livewire\Projects\Index::class)->name('projects.index');
+    Route::get('projects/create', \App\Http\Livewire\Projects\Create::class)->name('projects.create');
+    Route::get('projects/{project}', \App\Http\Livewire\Projects\Show::class)->name('projects.show');
+    Route::get('projects/{project}/edit', \App\Http\Livewire\Projects\Edit::class)->name('projects.edit');
 });
