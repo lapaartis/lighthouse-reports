@@ -12,6 +12,7 @@
         "laravel/jetstream": "^2.7",
         "laravel/sanctum": "^2.14.1",
         "laravel/tinker": "^2.7",
+        "laravolt/avatar": "^4.1",
         "livewire/livewire": "^2.5",
         "rawilk/laravel-breadcrumbs": "^3.0",
         "rawilk/laravel-form-components": "^7.1"

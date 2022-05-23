@@ -33,7 +33,7 @@
                         <div class="text-center">
                             <span class="border-4 border-white rounded-full mx-auto inline-block">
                                 <img class="rounded-full w-20 h-20"
-                                     src="https://randomwordgenerator.com/img/picture-generator/51e6dc41434faa0df7c5d57bc32f3e7b1d3ac3e455517349762f72d794_640.jpg"
+                                     src="{{ Avatar::create($project->name)->toBase64() }}"
                                      alt="profile"/>
                             </span>
                         </div>
@@ -41,19 +41,19 @@
                         <p class="text-xs text-center">Undertext</p>
                     </div>
                     <hr/>
-                    <div class="flex justify-between px-10 py-5">
+                    <div class="flex justify-between px-4 py-2">
                         <div class="text-center">
-                            <p class="font-bold">100K</p>
-                            <p class="text-xs">Followers</p>
+                            <p class="font-bold">{{ $project->audits()->count() }}</p>
+                            <p class="text-xs">Audits</p>
                         </div>
                         <div class="text-center">
-                            <p class="font-bold">903K</p>
-                            <p class="text-xs">Likes</p>
+                            <p class="font-bold">0</p>
+                            <p class="text-xs">Runs</p>
 
                         </div>
                         <div class="text-center">
-                            <p class="font-bold">104K</p>
-                            <p class="text-xs">Photos</p>
+                            <p class="font-bold">0</p>
+                            <p class="text-xs">Reports</p>
 
                         </div>
                     </div>
