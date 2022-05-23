@@ -19,3 +19,21 @@
         Hello
     </div>
 </div>
+
+<div>
+    <div class="text-center flex justify-between">
+        <h6 class="text-gray-700 text-xl font-bold">
+            Project audits
+        </h6>
+        <div class="flex justify-between">
+            <a href="{{ route('projects.audits.create', [$project]) }}"
+               class="bg-gray-700 active:bg-gray-600 text-white font-bold uppercase text-xs px-4 py-2 rounded shadow hover:shadow-md outline-none focus:outline-none mr-1 ease-linear transition-all duration-150"
+               type="button">
+                New Audit
+            </a>
+        </div>
+    </div>
+    <div class="pt-4">
+        @livewire('audits.index', ['project' => $project])
+    </div>
+</div>

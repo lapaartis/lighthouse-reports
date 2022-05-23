@@ -1,6 +1,6 @@
 <div class="grid grid-cols-1 md:grid-cols-4 xl:grid-cols-6 gap-4">
     @foreach($audits as $audit)
-        <a href="#" class="border border-2 rounded">
+        <a href="{{ route('projects.audits.show', [$audit->project_id, $audit->id]) }}" class="border border-2 rounded">
             <div class="py-5">
                 <div class="text-center">
                     <span class="border-4 border-white rounded-full mx-auto inline-block">
@@ -9,7 +9,7 @@
                              alt="profile"/>
                     </span>
                 </div>
-                <p class="text-center"><span class="font-bold">{{ $audit }}</span></p>
+                <p class="text-center"><span class="font-bold">{{ $audit->name }}</span></p>
                 <p class="text-xs text-center">Undertext</p>
             </div>
             <hr/>
