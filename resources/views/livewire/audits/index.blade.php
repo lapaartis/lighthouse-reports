@@ -1,34 +1,33 @@
-<div class="grid grid-cols-1 md:grid-cols-4 xl:grid-cols-6 gap-4">
-    @foreach($audits as $audit)
-        <a href="{{ route('projects.audits.show', [$audit->project_id, $audit->id]) }}" class="border border-2 rounded">
-            <div class="py-5">
-                <div class="text-center">
-                    <span class="border-4 border-white rounded-full mx-auto inline-block">
-                        <img class="rounded-full w-20 h-20"
-                             src="https://randomwordgenerator.com/img/picture-generator/51e6dc41434faa0df7c5d57bc32f3e7b1d3ac3e455517349762f72d794_640.jpg"
-                             alt="profile"/>
-                    </span>
-                </div>
-                <p class="text-center"><span class="font-bold">{{ $audit->name }}</span></p>
-                <p class="text-xs text-center">Undertext</p>
-            </div>
-            <hr/>
-            <div class="flex justify-between px-10 py-5">
-                <div class="text-center">
-                    <p class="font-bold">100K</p>
-                    <p class="text-xs">Followers</p>
-                </div>
-                <div class="text-center">
-                    <p class="font-bold">903K</p>
-                    <p class="text-xs">Likes</p>
+@php
+$header_row_class = "text-sm font-bold text-gray-900 px-6 py-4";
+$body_row_class = "text-sm font-medium text-gray-900 px-6 py-4 whitespace-nowrap";
+@endphp
 
-                </div>
-                <div class="text-center">
-                    <p class="font-bold">104K</p>
-                    <p class="text-xs">Photos</p>
-
-                </div>
+<div class="table border-separate w-full" style="border-spacing: 0 10px;">
+    <div class="table-header-group">
+        <div class="table-row bg-white">
+            <div class="table-cell {{ $header_row_class }} text-left rounded-l-lg">Name</div>
+            <div class="table-cell {{ $header_row_class }} text-center">Performance</div>
+            <div class="table-cell {{ $header_row_class }} text-center">P.W.A</div>
+            <div class="table-cell {{ $header_row_class }} text-center">Accessibility</div>
+            <div class="table-cell {{ $header_row_class }} text-center">Best practices</div>
+            <div class="table-cell {{ $header_row_class }} text-center">S.E.O</div>
+            <div class="table-cell {{ $header_row_class }} text-center rounded-r-lg">Reports</div>
+        </div>
+    </div>
+    <div class="table-row-group pt-2">
+        @foreach($audits as $key => $audit)
+        <a href="{{ route('projects.audits.show', [$audit->project_id, $audit->id]) }}" class="table-row bg-white transition duration-300 ease-in-out hover:bg-gray-200">
+            <div class="table-cell {{ $body_row_class }} rounded-l-lg">
+                {{ $audit->name }}
             </div>
+            <div class="table-cell {{ $body_row_class }} text-center">0</div>
+            <div class="table-cell {{ $body_row_class }} text-center">0</div>
+            <div class="table-cell {{ $body_row_class }} text-center">0</div>
+            <div class="table-cell {{ $body_row_class }} text-center">0</div>
+            <div class="table-cell {{ $body_row_class }} text-center">0</div>
+            <div class="table-cell {{ $body_row_class }} text-center rounded-r-lg">0</div>
         </a>
-    @endforeach
+        @endforeach
+    </div>
 </div>
