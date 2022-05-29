@@ -1,4 +1,5 @@
 require('./bootstrap');
+require('./audit');
 
 import Alpine from 'alpinejs';
 
